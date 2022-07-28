@@ -97,7 +97,6 @@ def decode_jwt():
     except: # pylint: disable=bare-except
         abort(401)
 
-
     response = {'email': data['email'],
                 'exp': data['exp'],
                 'nbf': data['nbf'] }
