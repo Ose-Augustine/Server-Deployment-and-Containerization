@@ -90,6 +90,7 @@ def decode_jwt():
     """
     if not 'Authorization' in request.headers:
         abort(401)
+        
     data = request.headers['Authorization']
     token = str.replace(str(data), 'Bearer ', '')
     try:
